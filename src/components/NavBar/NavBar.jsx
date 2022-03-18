@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import './NavBar.css';
 import { Box, ClickAwayListener} from "@mui/material";
 import ALink from "../Atomic/ALink";
+import AButton from "../Atomic/AButton";
 
 
 
@@ -14,7 +15,7 @@ function NavBar(){
             margin: 0,
             padding: 0,
             //overflow: 'hidden',
-            backgroundColor: '#333',
+            backgroundColor: '#B37474',
             display: 'flex',
             flexDirection: 'row'
         },
@@ -27,6 +28,9 @@ function NavBar(){
             textAlign: 'center',
             padding: '14px 16px',
             textDecoration: 'none',
+        },
+        logoSite:{
+            color: 'white'
         }
     }
 
@@ -45,6 +49,9 @@ function NavBar(){
         <nav>
             <ul style={mystyle.navBarUl}>
                 <li style={mystyle.navBarLi}>
+                    <div style={mystyle.logoSite}>AG</div>
+                </li>
+                <li style={mystyle.navBarLi}>
                     <ALink styles={mystyle.navBarA} to="/" >Home</ALink>
                 </li>
                 <li style={mystyle.navBarLi}>
@@ -52,13 +59,14 @@ function NavBar(){
 
                         <ClickAwayListener onClickAway={handleClickAway}>
                             <div>
-                                <button style={mystyle.navBarA} onClick={() => handleClick()} className="dropbtn">News
+
+                                <AButton styles={mystyle.navBarA}  onClickButton={() => handleClick()} classNames="dropbtn">
+                                    Menu
                                     <i className="fa fa-caret-down"></i>
-                                </button>
+                                </AButton>
                                 {displayBlock ? (
                                     <Box>
                                         <div className={['dropdown-content'].join(" ")} id="myDropdown">
-                                            <ALink to="/contact">Contacter nous</ALink>
                                             <ALink to='/login'>Login</ALink>
                                             <ALink to='/article'>Article</ALink>
                                             <ALink to='/articles'>Articles</ALink>
@@ -73,7 +81,7 @@ function NavBar(){
                     <ALink styles={mystyle.navBarA} to="/contact" >Contact</ALink>
                 </li>
                 <li style={mystyle.navBarLi}>
-                    <ALink styles={mystyle.navBarA} to="/about" >About</ALink>
+                    <ALink styles={mystyle.navBarA} to="/about" >A propos</ALink>
                 </li>
             </ul>
         </nav>

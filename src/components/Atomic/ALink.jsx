@@ -8,7 +8,6 @@ import {
 function ALink({ children, to, styles, ...props }) {
     let resolved = useResolvedPath(to);
     let match = useMatch({ path: resolved.pathname });
-    console.log(match);
 
     return (
         <div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Aform({title,children, ...props}){
+function AForm({title,children, ...props}){
     return(
         <div  className="w-50">
             <h2>{title}</h2>
@@ -12,4 +12,4 @@ function Aform({title,children, ...props}){
     );
 }
 
-export default Aform;
+export default AForm;
