@@ -1,10 +1,18 @@
 import React from "react";
-import logo from "../../logo.svg";
+import sp from "./saphir.png";
+import PreviewArticles from "../../components/PreviewArticles/PreviewArticles";
+import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
 
 function HomePage() {
     return(
-        <div>
-
+        <div className="d-flex container-fluid">
+            <img src={sp} style={{marginRight: "2rem", marginLeft: "2rem"}}/>
+            <PreviewArticles/>
+            <TwitterTimelineEmbed
+                sourceType="profile"
+                screenName="KarmineCorp"
+                options={{height: 400}}
+            />
 
         </div>
     )
