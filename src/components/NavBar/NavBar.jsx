@@ -3,6 +3,8 @@ import './NavBar.css';
 import { Box, ClickAwayListener} from "@mui/material";
 import ALink from "../Atomic/ALink";
 import AButton from "../Atomic/AButton";
+import LoginIcon from '@mui/icons-material/Login';
+import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
 
 
 
@@ -17,10 +19,14 @@ function NavBar(){
             //overflow: 'hidden',
             backgroundColor: '#B37474',
             display: 'flex',
-            flexDirection: 'row'
+            flexDirection: 'row',
+            justifyContent: 'space-between'
         },
         navBarLi: {
             //float: 'left'
+        },
+        navBarDiv:{
+            display: 'flex'
         },
         navBarA: {
             display: 'block',
@@ -48,41 +54,49 @@ function NavBar(){
     return(
         <nav>
             <ul style={mystyle.navBarUl}>
-                <li style={mystyle.navBarLi}>
-                    <div style={mystyle.logoSite}>AG</div>
-                </li>
-                <li style={mystyle.navBarLi}>
-                    <ALink styles={mystyle.navBarA} to="/" >Home</ALink>
-                </li>
-                <li style={mystyle.navBarLi}>
-                    <div className="dropdown">
+                <div style={mystyle.navBarDiv}>
+                    <li style={mystyle.navBarLi}>
+                        <div style={mystyle.logoSite}><VideogameAssetIcon fontSize={"large"} /></div>
+                    </li>
+                    <li style={mystyle.navBarLi}>
+                        <ALink styles={mystyle.navBarA} to="/" >Home</ALink>
+                    </li>
+                    <li style={mystyle.navBarLi}>
+                        <div className="dropdown">
 
-                        <ClickAwayListener onClickAway={handleClickAway}>
-                            <div>
+                            <ClickAwayListener onClickAway={handleClickAway}>
+                                <div>
 
-                                <AButton styles={mystyle.navBarA}  onClickButton={() => handleClick()} classNames="dropbtn">
-                                    Menu
-                                    <i className="fa fa-caret-down"></i>
-                                </AButton>
-                                {displayBlock ? (
-                                    <Box>
-                                        <div className={['dropdown-content'].join(" ")} id="myDropdown">
-                                            <ALink to='/login'>Login</ALink>
-                                            <ALink to='/article'>Article</ALink>
-                                            <ALink to='/articles'>Articles</ALink>
-                                        </div>
-                                    </Box>
-                                ) : null}
-                            </div>
-                        </ClickAwayListener>
-                    </div>
-                </li>
-                <li style={mystyle.navBarLi}>
-                    <ALink styles={mystyle.navBarA} to="/contact" >Contact</ALink>
-                </li>
-                <li style={mystyle.navBarLi}>
-                    <ALink styles={mystyle.navBarA} to="/about" >A propos</ALink>
-                </li>
+                                    <AButton styles={mystyle.navBarA}  onClickButton={() => handleClick()} classNames="dropbtn">
+                                        Menu
+                                        <i className="fa fa-caret-down"></i>
+                                    </AButton>
+                                    {displayBlock ? (
+                                        <Box>
+                                            <div className={['dropdown-content'].join(" ")} id="myDropdown">
+                                                <ALink to='/article'>Article</ALink>
+                                                <ALink to='/articles'>Articles</ALink>
+                                            </div>
+                                        </Box>
+                                    ) : null}
+                                </div>
+                            </ClickAwayListener>
+                        </div>
+                    </li>
+                    <li style={mystyle.navBarLi}>
+                        <ALink styles={mystyle.navBarA} to="/contact" >Contact</ALink>
+                    </li>
+                    <li style={mystyle.navBarLi}>
+                        <ALink styles={mystyle.navBarA} to="/about" >A propos</ALink>
+                    </li>
+                </div>
+                <div style={mystyle.navBarDiv}>
+                    <li style={mystyle.navBarLi}>
+                        <ALink styles={mystyle.navBarA} to="/login" >Se Connecter <LoginIcon/></ALink>
+                    </li>
+                </div>
+
+
             </ul>
         </nav>
 
