@@ -5,17 +5,16 @@ import {
     useResolvedPath
 } from 'react-router-dom';
 
-function ALink({ children, to, ...props }) {
+function ALink({ children, to, styles, ...props }) {
     let resolved = useResolvedPath(to);
     let match = useMatch({ path: resolved.pathname });
     console.log(match);
 
     return (
         <div>
-            <Link to={to} {...props}>
+            <Link style={styles} to={to} {...props}>
                 {children}
             </Link>
-            {match && " (active)"}
         </div>
     );
 

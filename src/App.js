@@ -11,11 +11,15 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import ArticlePage from "./pages/ArticlePage/ArticlePage";
 import ArticlesPage from "./pages/ArticlesPages/ArticlesPage";
 import MentionLegalPage from "./pages/MentionLegalPage/MentionLegalPage";
+import NavBar from "./components/NavBar/NavBar";
 
 function App() {
     return (
-        <div className="App">
+        <div className='container-fluid p-0'>
             <Router>
+                <div className='row'>
+                    <NavBar />
+                </div>
                 <Routes>
                     <Route path=""  element={<HomePage/>} ></Route>
                     <Route path="/about" element={<AboutPage/>}></Route>
@@ -23,7 +27,7 @@ function App() {
                     <Route path="/login"  element={<LoginPage/>} ></Route>
                     <Route path="/article" element={<ArticlePage/>}></Route>
                     <Route path="/articles" element={<ArticlesPage/>}></Route>
-                    <Route path="mentionLegal" elemet={<MentionLegalPage/>}></Route>
+                    <Route path="/mentionLegal" elemet={<MentionLegalPage/>}></Route>
                 </Routes>
             </Router>
         </div>
