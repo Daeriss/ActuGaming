@@ -4,6 +4,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import 'bootstrap/dist/css/bootstrap.css';
+import ABarreVertical from "../Atomic/ABarreVertical";
 
 
 function Footer(){
@@ -14,7 +15,7 @@ function Footer(){
                 <ALink to={"/about"} styles={{textDecoration: "none", color: "black"}}>A propos</ALink>
                 <ALink to={"/contact"} styles={{textDecoration: "none", color: "black"}}>Nous contacter</ALink>
             </div>
-            <span style={{borderLeft: "1px solid black", height: "4rem", display: "inline-block",marginTop:"1rem"}}></span>
+            <ABarreVertical />
             <div className="col-5 d-flex align-items-center">
                 <TwitterIcon style={{marginRight:"2rem"}} fontSize="large"/>
                 <FacebookIcon  style={{marginRight:"2rem"}} fontSize="large"/>

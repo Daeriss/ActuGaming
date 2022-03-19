@@ -12,12 +12,13 @@ import ArticlePage from "./pages/ArticlePage/ArticlePage";
 import ArticlesPage from "./pages/ArticlesPages/ArticlesPage";
 import MentionLegalPage from "./pages/MentionLegalPage/MentionLegalPage";
 import NavBar from "./components/NavBar/NavBar";
+import Footer from "./components/Footer/Footer";
 
 function App() {
     return (
         <div className='container-fluid p-0'>
             <Router>
-                <div className='row'>
+                <div >
                     <NavBar />
                 </div>
                 <Routes>
@@ -29,6 +30,9 @@ function App() {
                     <Route path="/articles" element={<ArticlesPage/>}></Route>
                     <Route path="/mentionLegal" elemet={<MentionLegalPage/>}></Route>
                 </Routes>
+                <div>
+                    <Footer></Footer>
+                </div>
             </Router>
         </div>
     );
