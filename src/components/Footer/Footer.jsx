@@ -10,7 +10,7 @@ import ABarreVertical from "../Atomic/ABarreVertical";
 function Footer(){
     return(
         <div style={{backgroundColor:"#EE9F9F", position:"fixed" ,left: 0,bottom: 0}} className="container-fluid d-flex justify-content-around ">
-            <div className="col-5 d-flex flex-column align-items-end mt-3 mb-3">
+            <div className="col-5 d-flex flex-column align-items-end mt-2 mb-2">
                 <ALink to={"mentionLegal"} styles={{textDecoration: "none", color: "black"}}>Mentions Légale</ALink>
                 <ALink to={"/about"} styles={{textDecoration: "none", color: "black"}}>A propos</ALink>
                 <ALink to={"/contact"} styles={{textDecoration: "none", color: "black"}}>Nous contacter</ALink>
