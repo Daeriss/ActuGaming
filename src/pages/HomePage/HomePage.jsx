@@ -5,7 +5,7 @@ import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterH
 
 function HomePage() {
     return(
-        <div className="d-flex container-fluid">
+        <div className="d-flex">
             <img src={sp} style={{marginRight: "2rem", marginLeft: "2rem"}}/>
             <PreviewArticles/>
             <TwitterTimelineEmbed

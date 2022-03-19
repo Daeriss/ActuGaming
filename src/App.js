@@ -18,7 +18,8 @@ function App() {
     return (
         <div className='container-fluid p-0'>
             <Router>
-                <div >
+
+                <div className="row g-0" >
                     <NavBar />
                 </div>
                 <Routes>
@@ -30,7 +31,7 @@ function App() {
                     <Route path="/articles" element={<ArticlesPage/>}></Route>
                     <Route path="/mentionLegal" elemet={<MentionLegalPage/>}></Route>
                 </Routes>
-                <div>
+                <div className="row g-0" style={{backgroundColor:"#EE9F9F", position:"fixed" ,left: 0,bottom: 0}}>
                     <Footer></Footer>
                 </div>
             </Router>
