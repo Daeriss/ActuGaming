@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Project Actugaming - WebForce 3 - Module developpement web avec Javascript
+Création du front-end avec React pour blog d'actu-gaming
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

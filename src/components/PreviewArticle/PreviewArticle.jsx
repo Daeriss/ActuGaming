@@ -3,7 +3,7 @@ import mk from "./mk.png";
 
 function PreviewArticle(){
     return(
-        <div className="d-flex container-fluid">
+        <div className="d-flex ">
             <img src={mk} style={{width:"10rem", height:"10rem", marginRight:"3rem"}}/>
             <div>
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt olor sit amet.</p>
