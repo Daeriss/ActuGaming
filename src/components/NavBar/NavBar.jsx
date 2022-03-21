@@ -62,6 +62,26 @@ function NavBar(){
                         <ALink styles={mystyle.navBarA} to="/" >Home</ALink>
                     </li>
                     <li style={mystyle.navBarLi}>
+                        {/*<div className="dropdown">*/}
+
+                        {/*    <ClickAwayListener onClickAway={handleClickAway}>*/}
+                        {/*        <div>*/}
+
+                        {/*            <AButton styles={mystyle.navBarA}  onClickButton={() => handleClick()} classNames="dropbtn">*/}
+                        {/*                Menu*/}
+                        {/*                <i className="fa fa-caret-down"></i>*/}
+                        {/*            </AButton>*/}
+                        {/*            {displayBlock ? (*/}
+                        {/*                <Box>*/}
+                        {/*                    <div className={['dropdown-content'].join(" ")} id="myDropdown">*/}
+                        {/*                        <ALink to='/article'>Article</ALink>*/}
+                        {/*                        <ALink to='/articles'>Articles</ALink>*/}
+                        {/*                    </div>*/}
+                        {/*                </Box>*/}
+                        {/*            ) : null}*/}
+                        {/*        </div>*/}
+                        {/*    </ClickAwayListener>*/}
+                        {/*</div>*/}
                         <ALink styles={mystyle.navBarA} to="/articles" >Articles</ALink>
                     </li>
                     <li style={mystyle.navBarLi}>
