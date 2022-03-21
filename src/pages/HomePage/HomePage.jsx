@@ -11,19 +11,15 @@ function HomePage() {
             <div className="d-flex" style={{width: '100%'}}>
                 <Carousel/>
             </div>
-            <div className="d-flex" style={{flexDirection: 'row'}}>
-
+            <div className="d-flex mt-5 mb-5" style={{flexDirection: 'row'}}>
                 <img src={sp} style={{marginRight: "2rem", marginLeft: "2rem"}}/>
                 <PreviewArticles/>
                 <TwitterTimelineEmbed
                     sourceType="profile"
                     screenName="KarmineCorp"
                     options={{height: 400}}/>
-
             </div>
-
         </div>
-
     )
 }
 

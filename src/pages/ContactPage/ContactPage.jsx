@@ -11,13 +11,13 @@ function ContactPage() {
 
     return(
         <div className="row g-0 justify-content-center align-items-center" style={{marginTop: "5em"}}>
-                <div className={"w-30 d-flex justify-content-center form-inscription"} >
-                        <AForm title="Nous contacter">
-                            <AInput label="Nom prénom" type="text"/>
-                            <AInput label="Adresse mail" type="mail"/>
-                            <AInput label="Object" type="textarea"/>
+                <div className={"w-30 d-flex justify-content-center form-connexion"} >
+                        <AForm title="Nous contacter" titleColor={"white"}>
+                            <AInput label="Nom prénom" type="text" inputColor={"white"} />
+                            <AInput label="Adresse mail" type="mail" inputColor={"white"}/>
+                            <AInput label="Object" type="textarea" inputColor={"white"}/>
                             <div className="d-flex flex-column">
-                                <label className="col-form-label mt-4 text-start">Votre message</label>
+                                <label style={{color: "white"}} className="col-form-label mt-4 text-start">Votre message</label>
                                 <textarea className="form-control" ></textarea>
                             </div>
                             <div className={"justify-content-center mb-3"}>

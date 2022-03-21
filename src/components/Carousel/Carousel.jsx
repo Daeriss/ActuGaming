@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import './Carousel.css';
-import banniere1 from '../../image/banniere1.png'
-import banniere2 from '../../image/banniere2.jpg'
-import banniere3 from '../../image/bannierepokemon.png'
+import banniere1 from './h.PNG';
+import banniere2 from '../../image/banniere2.jpg';
+import banniere3 from '../../image/bannierepokemon.png';
 
 
 function Carousel(){
@@ -58,27 +58,18 @@ function Carousel(){
     }
 
     return(
-        <div className={["rounded-3", "border", "border-2", "carouselCSS"].join(" ")}>
-
-            <div className="slideshow-container">
-
-                <div className=" ">
-                    <div className="number-text">{textPosition}</div>
-                    <img src={banner} className="banniereStyle"  />
-                    <div className="text">{texteBanner}</div>
+        <div  className="rounded-3 border border-2 carouselCSS slideshow-container">
+            <div className="d-flex flex-column-reverse align-items-center" style={{justifyContent: "end", backgroundImage:`url("`+ banner +`")`, backgroundPosition:"center", backgroundSize:"cover", height:"20rem",width:"100%"}}>
+                <div style={{textAlign:"enter"}}>
+                    <span className="dot" onClick={() => showSlides(0)}></span>
+                    <span className="dot" onClick={() => showSlides(1)}></span>
+                    <span className="dot" onClick={() => showSlides(2)}></span>
                 </div>
-
-                <a className="prev" onClick={() => showSlides("down")}>&#10094;</a>
-                <a className="next" onClick={() =>showSlides("up")}>&#10095;</a>
+                <div className="text">{texteBanner}</div>
             </div>
-            <br />
-            <div style={{textAlign:"enter"}}>
-                <span className="dot" onClick={() => showSlides(0)}></span>
-                <span className="dot" onClick={() => showSlides(1)}></span>
-                <span className="dot" onClick={() => showSlides(2)}></span>
-            </div>
+            <a className="prev" onClick={() => showSlides("down")}>&#10094;</a>
+            <a className="next" onClick={() =>showSlides("up")}>&#10095;</a>
         </div>
-
     )
 }
 

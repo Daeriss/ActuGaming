@@ -11,10 +11,10 @@ import "../../App.css";
 function LoginPage() {
     return(
         <div className="row g-0 justify-content-center align-items-center mb-3" style={{marginTop: "5em"}} >
-                <div className={"w-30 d-flex justify-content-center form-inscription"}>
-                    <AForm title="Connexion">
-                        <AInput label="Adresse mail" type="mail"/>
-                        <AInput label="Mot de passe" type="password"/>
+                <div className={"w-20 d-flex justify-content-center form-connexion"}>
+                    <AForm title="Connexion" titleColor={"white"}>
+                        <AInput label="Adresse mail" type="mail" inputColor={"white"}/>
+                        <AInput label="Mot de passe" type="password" inputColor={"white"}/>
                         <div className={"justify-content-center mb-3"}>
                             <AButton classNames={"btn-sign-in"} styles={{border: "1px solid #707070", borderRadius: ".5em",
                                 outline: "none",
@@ -26,7 +26,7 @@ function LoginPage() {
                         </div>
                     </AForm>
                 </div>
-                <div className={"w-30 d-flex justify-content-center form-inscription"} >
+                <div className={"w-20 d-flex justify-content-center form-inscription"} >
                     <AForm title="Inscription">
                         <AInput label="Nom Prénom" type="text"/>
                         <AInput label="Adresse mail" type="mail"/>
