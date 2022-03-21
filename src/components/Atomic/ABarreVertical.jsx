@@ -12,9 +12,7 @@ import React from "react";
  */
 function ABarreVertical(styles,...props) {
 
-
     let styleCustom = {
-        borderColor : "black",
         borderLeft: " 1px solid",
         height: "4rem",
         display: "inline-block",

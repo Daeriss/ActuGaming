@@ -1,0 +1,14 @@
+.btn-sign-in {
+    color: #EE9F9F !important;
+    border: 2px solid #EE9F9F !important;
+    background: white !important;/* default color */
+    background: linear-gradient(to left, white 50%, #EE9F9F 50%) right !important;
+    background-size: 200% !important;
+    transition: .5s ease-out !important;
+    font-size: 20px !important;
+}
+
+.btn-sign-in:hover {
+    color: white !important;
+    background-position: left !important;
+}
