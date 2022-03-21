@@ -16,7 +16,7 @@ function ABlock({children, styles, classNames, ...props}) {
     }
 
     return(
-        <div style={typeof styles === "undefined"? defaultStyle : styles }>
+        <div style={typeof styles === "undefined"? defaultStyle : styles } className={classNames}>
             {children}
         </div>
     )
