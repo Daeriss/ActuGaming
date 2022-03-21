@@ -7,52 +7,54 @@ import banniere3 from '../../image/bannierepokemon.png'
 
 function Carousel(){
 
-    let [showCurrentSlide, setShowCurrentSlide] = useState(1);
-    let [slideIndex, setSlideIndex] = useState(1);
     let [banner , setBanner] = useState(banniere1);
-
-
-
-
-
-    function plusSlides(n) {
-
-        console.log('avant incr : ' + slideIndex)
-        setSlideIndex(3)
-        console.log('après incr : ' + slideIndex)
-        showSlides(slideIndex);
-
-    }
-
-
-    function currentSlide(n) {
-        setSlideIndex((n))
-        setShowCurrentSlide((n));
-        //showSlides(slideIndex = n);
-    }
+    let [position, setPossiton] = useState(0);
+    let banners = [banniere1, banniere2, banniere3];
+    let [textPosition, setTextPosition] = useState("1 /3");
+    let textes = ["Mass Effect", "The Elder Scroll", "Pokémon"]
+    let [texteBanner, setTexteBanner] = useState(textes[0]);
 
     function showSlides(n) {
 
-        switch (n) {
 
-            case 1 :
-                setBanner(banniere1);
-                setShowCurrentSlide(1);
-                break;
-            case 2 :
-                setBanner(banniere2);
-                setShowCurrentSlide(2);
-                break;
-            case 3:
-                setBanner(banniere3);
-                setShowCurrentSlide(3);
-                break;
-            default :
-                setBanner(banniere1);
-                setShowCurrentSlide(1);
-                break;
+        let tmpValue = position;
+
+        if (n ==="up"){
+            console.log("avant incr up :" +tmpValue);
+            tmpValue = tmpValue +1;
+            console.log("après incr tmpValue up: "+ tmpValue);
+            if(3 <= tmpValue)
+                tmpValue = 0;
+
+            setPossiton(Number.parseInt(tmpValue));
+            console.log("après incr up: "+ position);
+            setTextPosition(((tmpValue+1) +" / " + banners.length))
+            setBanner(banners[tmpValue]);
+            setTexteBanner(textes[tmpValue]);
+
+        }else if(n ==="down"){
+            console.log("avant incr down :" +tmpValue);
+            tmpValue = tmpValue -1;
+            console.log("après incr tmpValue down: "+ tmpValue);
+
+            if(0 >tmpValue)
+                tmpValue = 2;
+
+            setPossiton(Number.parseInt(tmpValue));
+            console.log("après incr down : "+ position);
+            setTextPosition(((tmpValue+1) +" / " + banners.length))
+            setBanner(banners[tmpValue]);
+            setTexteBanner(textes[tmpValue]);
+
+        }else {
+            setPossiton(n);
+            setTextPosition(((n+1) +" / " + banners.length))
+            setBanner(banners[n]);
+            setTexteBanner(textes[n]);
+
 
         }
+
     }
 
     return(
@@ -61,28 +63,20 @@ function Carousel(){
             <div className="slideshow-container">
 
                 <div className=" ">
-                    <div className="number-text">1 / 3</div>
+                    <div className="number-text">{textPosition}</div>
                     <img src={banner} className="banniereStyle"  />
-                    <div className="text">Caption Text</div>
+                    <div className="text">{texteBanner}</div>
                 </div>
 
-                <a className="prev" onClick={() => plusSlides(-1)}>&#10094;</a>
-                <a className="next" onClick={() =>plusSlides(1)}>&#10095;</a>
-
-
-
-
-
+                <a className="prev" onClick={() => showSlides("down")}>&#10094;</a>
+                <a className="next" onClick={() =>showSlides("up")}>&#10095;</a>
             </div>
             <br />
-
             <div style={{textAlign:"enter"}}>
+                <span className="dot" onClick={() => showSlides(0)}></span>
                 <span className="dot" onClick={() => showSlides(1)}></span>
                 <span className="dot" onClick={() => showSlides(2)}></span>
-                <span className="dot" onClick={() => showSlides(3)}></span>
             </div>
-
-
         </div>
 
     )
