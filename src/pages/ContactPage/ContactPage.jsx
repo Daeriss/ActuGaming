@@ -11,9 +11,7 @@ function ContactPage() {
 
     return(
         <div className="row g-0 justify-content-center align-items-center" style={{marginTop: "5em"}}>
-            <ABlock styles={{border: "none", width: "80%" }}>
-                <ABlock styles={{marginBottom:"4rem", border: "1px solid black", display: "flex"}}>
-                    <ABlock styles={{width:"50%", border : "none", display: "flex", flexDirection: "column", alignItems: "center"}}>
+                <div className={"w-30 d-flex justify-content-center form-inscription"} >
                         <AForm title="Nous contacter">
                             <AInput label="Nom prénom" type="text"/>
                             <AInput label="Adresse mail" type="mail"/>
@@ -22,7 +20,7 @@ function ContactPage() {
                                 <label className="col-form-label mt-4 text-start">Votre message</label>
                                 <textarea className="form-control" ></textarea>
                             </div>
-                            <div className={"d-flex  justify-content-center mb-3"}>
+                            <div className={"justify-content-center mb-3"}>
                                 <AButton classNames={"btn-sign-in"} styles={{border: "1px solid #707070", borderRadius: ".5em",
                                 outline: "none",
                                 background: "inherit",
@@ -31,27 +29,21 @@ function ContactPage() {
                                 Envoyer
                                 </AButton>
                             </div>
-
                         </AForm>
-                    </ABlock>
-                    <ABarreVertical styles={{height: "29rem", marginRight: "7rem"}}/>
-                    <ABlock styles={{border : "none",
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        width: "30%"}}>
-                        <h2>Nous Trouver</h2>
+                    </div>
+                     <div style={{height: "40.5rem"}} className={"w-30 d-flex flex-column justify-content-start form-inscription"} >
+                        <h2 className="mb-2 align-self-center" style={{color:"#884A65"}}>Nous Trouver</h2>
                         <img src={carteLoc} style={{maxWidth: "100%",
                             height: 'auto'}}/>
-                        <a href="https://goo.gl/maps/i9vSAsCq1ywSsdcC9">Ouvrir Carte</a>
-                        <ABlock styles={{border: "none"}}>
-                            3 chemin du ravin,
-                            Grand Gouffre de la principauté de Shéogorath
+                        <a className="m-2 align-self-center" href="https://goo.gl/maps/i9vSAsCq1ywSsdcC9">Ouvrir Carte</a>
+                        <div style={{border: "none"}}>
+                            3 chemin du ravin,<br/>
+                            Grand Gouffre de la principauté de Shéogorath<br/>
                             Oblivion
-                        </ABlock>
-                    </ABlock>
-                </ABlock>
-            </ABlock>
+                        </div>
+                    </div>
+
+
         </div>
     )
 }
