@@ -30,20 +30,18 @@ function ContactPage() {
                                 </AButton>
                             </div>
                         </AForm>
+                </div>
+                <div style={{height: "40.5rem"}} className={"w-30 d-flex flex-column justify-content-start form-inscription"} >
+                    <h2 className="mb-2 align-self-center" style={{color:"#884A65"}}>Nous Trouver</h2>
+                    <img src={carteLoc} style={{maxWidth: "100%",
+                        height: 'auto'}}/>
+                    <a className="m-2 align-self-center" href="https://goo.gl/maps/i9vSAsCq1ywSsdcC9">Ouvrir Carte</a>
+                    <div style={{border: "none"}}>
+                        3 chemin du ravin,<br/>
+                        Grand Gouffre de la principauté de Shéogorath<br/>
+                        Oblivion
                     </div>
-                     <div style={{height: "40.5rem"}} className={"w-30 d-flex flex-column justify-content-start form-inscription"} >
-                        <h2 className="mb-2 align-self-center" style={{color:"#884A65"}}>Nous Trouver</h2>
-                        <img src={carteLoc} style={{maxWidth: "100%",
-                            height: 'auto'}}/>
-                        <a className="m-2 align-self-center" href="https://goo.gl/maps/i9vSAsCq1ywSsdcC9">Ouvrir Carte</a>
-                        <div style={{border: "none"}}>
-                            3 chemin du ravin,<br/>
-                            Grand Gouffre de la principauté de Shéogorath<br/>
-                            Oblivion
-                        </div>
-                    </div>
-
-
+                </div>
         </div>
     )
 }
