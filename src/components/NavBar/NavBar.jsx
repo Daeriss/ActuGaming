@@ -17,7 +17,7 @@ function NavBar(){
             margin: 0,
             padding: 0,
             //overflow: 'hidden',
-            backgroundColor: '#B37474',
+            backgroundColor: '#EE9F9F',
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'space-between'
@@ -30,13 +30,13 @@ function NavBar(){
         },
         navBarA: {
             display: 'block',
-            color: 'white',
+            color: 'black',
             textAlign: 'center',
             padding: '14px 16px',
             textDecoration: 'none',
         },
         logoSite:{
-            color: 'white'
+            color: 'black'
         }
     }
 
