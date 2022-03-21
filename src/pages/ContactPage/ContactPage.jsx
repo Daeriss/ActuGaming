@@ -16,14 +16,14 @@ function ContactPage() {
                     <ABlock styles={{width:"50%", border : "none", display: "flex", flexDirection: "column", alignItems: "center"}}>
                         <AForm title="Nous contacter">
                             <AInput label="Nom prénom" type="text"/>
-                            <AInput label="Adresse mail" type="text"/>
+                            <AInput label="Adresse mail" type="mail"/>
                             <AInput label="Object" type="textarea"/>
                             <div className="d-flex flex-column">
                                 <label className="col-form-label mt-4 text-start">Votre message</label>
                                 <textarea className="form-control" ></textarea>
                             </div>
                             <div className={"d-flex  justify-content-center mb-3"}>
-                                <AButton styles={{border: "1px solid #707070", borderRadius: ".5em",
+                                <AButton classNames={"btn-sign-in"} styles={{border: "1px solid #707070", borderRadius: ".5em",
                                 outline: "none",
                                 background: "inherit",
                                 marginTop: "1em",
