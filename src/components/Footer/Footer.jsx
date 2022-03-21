@@ -11,7 +11,7 @@ function Footer(){
     return(
         <div style={{backgroundColor:"#EE9F9F",left: 0,bottom: 0}} className=" d-flex justify-content-around w-100">
             <div className="col-5 d-flex flex-column align-items-end mt-3 mb-3">
-                <ALink to={"mentionLegal"} styles={{textDecoration: "none", color: "black"}}>Mentions Légale</ALink>
+                <ALink to={"/mentionLegal"} styles={{textDecoration: "none", color: "black"}}>Mentions Légale</ALink>
                 <ALink to={"/about"} styles={{textDecoration: "none", color: "black"}}>A propos</ALink>
                 <ALink to={"/contact"} styles={{textDecoration: "none", color: "black"}}>Nous contacter</ALink>
             </div>
