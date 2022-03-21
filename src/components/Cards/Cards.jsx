@@ -4,8 +4,9 @@ import Card from "../Card/Card";
 import { useState, useEffect } from 'react';
 import mk from "./mk.png";
 import LinearProgress from '@mui/material/LinearProgress';
-import json from "../../json/Articlesgenerated.json"
+import customJson from "../../json/Articlesgenerated.json";
 import ALink from "../Atomic/ALink";
+
 function Cards(){
 
     let [posts, setPosts] = useState(null)
@@ -13,11 +14,13 @@ function Cards(){
     useEffect(() => {
         const timer = setTimeout(() => {
             if (!posts) {
-                fetch('https://jsonplaceholder.typicode.com/posts')
-                    .then(res => res.json())
-                    .then(data => setPosts(data))
+                // fetch("../../json/Articlesgenerated.json")
+                //     .then(res => res.text())
+                //     .then(data => console.log(data))
+               setPosts(customJson);
             }
-        }, 2000)
+
+        }, 1000)
         return () => clearTimeout(timer)
     })
 
@@ -29,10 +32,10 @@ function Cards(){
         }else {
             return(
                 <div className="d-flex flex-wrap justify-content-between">
-                    {posts.map(post=> {
+                    {posts.map((post, index)=> {
                         return (
-                            <ALink bClass={"col-4 h-20"} styles={{textDecoration: "none", color: "black"}} to={"/article/"+ post.id }>
-                                <Card title={post.title} body={post.body} image={mk} id={post.id}/>
+                            <ALink key={post.index} bClass={"col-4 h-20"} styles={{textDecoration: "none", color: "black"}} to={"/article/"+ post.index}>
+                                <Card title={post.title} body={post.preview} image={post.picture} id={post.index} text={post.text} date={post.date}/>
                             </ALink>
                         )
                     })}

@@ -18,7 +18,6 @@ function App() {
     return (
         <div className='container-fluid p-0'>
             <Router>
-
                 <div className="row g-0" >
                     <NavBar />
                 </div>
