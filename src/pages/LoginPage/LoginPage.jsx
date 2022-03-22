@@ -16,9 +16,9 @@ function LoginPage() {
                         <AInput label="Adresse mail" type="mail" inputColor={"white"}/>
                         <AInput label="Mot de passe" type="password" inputColor={"white"}/>
                         <div className={"justify-content-center mb-3"}>
-                            <AButton classNames={"btn-sign-in"} styles={{border: "1px solid #707070", borderRadius: ".5em",
+                            <AButton classNames={"btn-sign-in"} styles={{borderRadius: ".5em",
+                                border: "none",
                                 outline: "none",
-                                background: "#884A65}",
                                 marginTop: "11em",
                                 width: "100%"}}>
                                 Envoyer
@@ -33,7 +33,7 @@ function LoginPage() {
                         <AInput label="Mot de passe" type="password"/>
                         <AInput label="Confirmation mot de passe" type="password"/>
                         <div className={"d-flex  justify-content-center mb-3"}>
-                            <AButton classNames={"btn-sign-in"} styles={{border: "1px solid #707070", borderRadius: ".5em",
+                            <AButton classNames={"btn-sign-in"} styles={{border: "1px solid #884A65", borderRadius: ".5em",
                                 outline: "none",
                                 background: "#884A65",
                                 marginTop: "1em",

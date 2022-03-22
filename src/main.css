@@ -12,18 +12,20 @@
 }
 
 .btn-sign-in {
-    color: #EE9F9F !important;
-    border: 2px solid white !important;
+    color: var(--third-color) !important;
+    /*border: 2px solid white !important;*/
     background: white !important;/* default color */
-    background: linear-gradient(to left, white 50%, rgb(124 83 146) 50%) right !important;
+    /*background: linear-gradient(to left, white 50%, rgb(124 83 146) 50%) right !important;*/
     background-size: 200% !important;
-    transition: .5s ease-out !important;
+    /*transition: .5s ease-out !important;*/
     font-size: 20px !important;
 }
 
 .btn-sign-in:hover {
-    color: white !important;
-    background-position: left !important;
+    /*color: white !important;*/
+    /*background-position: left !important;*/
+    box-shadow:inset 0px 1px 10px 0px var(--third-color);
+
 }
 
 
@@ -62,4 +64,14 @@
     -moz-transition: 1s ease-in-out;
     -ms-transition: 1s ease-in-out;
     -o-transition: 1s ease-in-out;
+}
+
+.team-member {
+    width: 100%;
+    /*margin: 27px;*/
+    box-shadow:inset 0px 1px 3px 0px var(--shadow-color);
+    border-radius: 10px;
+    border: 2px solid var(--third-color);
+    padding: 50px;
+    background-color: white;
 }

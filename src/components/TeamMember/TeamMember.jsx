@@ -7,8 +7,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 function TeamMember({image,name,desc,tott,tol, ...props}){
     return(
-        <div className="d-flex mb-3 p-0">
-            <img src={image} className="col-3" style={{width:"10rem", height:"10rem", marginRight:"3rem"}}/>
+        <div className="d-flex mb-3 p-1 team-member" >
+            <img src={image} className="col-3" style={{width:"10rem", height:"10rem", marginRight:"3rem", borderRadius: "5%"}}/>
             <div className="col-9 d-flex flex-column m-3">
                 <h3 className="mb-2">{name}</h3>
                 <p className="mb-2">{desc}</p>
