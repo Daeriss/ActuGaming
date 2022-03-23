@@ -56,12 +56,21 @@ function Cards(){
         }else {
             return(
                 <div>
-                    <div className="d-flex flex-wrap justify-content-end">
-                        <ABlock styles={{width:"50%", border : "none", display: "flex", flexDirection: "column", alignItems: "center"}}>
+
+                    <div className="d-flex flex-wrap justify-content-between align-items-end">
+                        <h1>Articles Page</h1>
+                        <ABlock styles={{width:"50%", border : "none", display: "flex", flexDirection: "column", alignItems: "flex-end"}}>
                             <AForm>
                                 <div className="d-flex flex-column">
-                                    <label className="col-form-label mt-4 text-start">Recheche</label>
-                                    <input className="form-control" type="text" onChange={(event) => (inputHandler(event))} value={input} />
+                                    {/*<div className="d-flex">*/}
+                                    {/*    <label className="col-form-label mt-4 text-start">Recheche</label>*/}
+                                    {/*</div>*/}
+                                    <div className="d-flex">
+                                        <input className="form-control" type="text" placeholder="Recherche titre article"
+                                               onChange={(event) => (inputHandler(event))} value={input} />
+                                    </div>
+
+
                                 </div>
                             </AForm>
                         </ABlock>
