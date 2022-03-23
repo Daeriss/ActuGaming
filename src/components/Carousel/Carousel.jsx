@@ -16,28 +16,32 @@ function Carousel(){
 
     function showSlides(n) {
 
+
         let tmpValue = position;
 
         if (n ==="up"){
-            tmpValue += 1;
-
-            if (3 <= tmpValue) {
+            console.log("avant incr up :" +tmpValue);
+            tmpValue = tmpValue +1;
+            console.log("après incr tmpValue up: "+ tmpValue);
+            if(3 <= tmpValue)
                 tmpValue = 0;
-            }
 
             setPossiton(Number.parseInt(tmpValue));
+            console.log("après incr up: "+ position);
             setTextPosition(((tmpValue+1) +" / " + banners.length))
             setBanner(banners[tmpValue]);
             setTexteBanner(textes[tmpValue]);
 
-        }else if (n ==="down") {
-            tmpValue -=1;
-        }
+        }else if(n ==="down"){
+            console.log("avant incr down :" +tmpValue);
+            tmpValue = tmpValue -1;
+            console.log("après incr tmpValue down: "+ tmpValue);
 
-        if (0 >tmpValue) {
-            tmpValue = 2;
+            if(0 >tmpValue)
+                tmpValue = 2;
 
             setPossiton(Number.parseInt(tmpValue));
+            console.log("après incr down : "+ position);
             setTextPosition(((tmpValue+1) +" / " + banners.length))
             setBanner(banners[tmpValue]);
             setTexteBanner(textes[tmpValue]);
@@ -47,7 +51,10 @@ function Carousel(){
             setTextPosition(((n+1) +" / " + banners.length))
             setBanner(banners[n]);
             setTexteBanner(textes[n]);
+
+
         }
+
     }
 
     return(
