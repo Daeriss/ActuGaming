@@ -5,7 +5,6 @@ function ArticlesPage() {
 
     return (
         <div className={"p-5"}>
-            <h1>Articles Page</h1>
             <Cards/>
         </div>
     )
