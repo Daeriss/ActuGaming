@@ -17,7 +17,7 @@ function ABarreVertical(styles,...props) {
         height: "4rem",
         display: "inline-block",
         marginTop: "1rem",
-        borderColor: "black"
+        borderColor: "white"
 
     };
 

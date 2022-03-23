@@ -9,17 +9,17 @@ import ABarreVertical from "../Atomic/ABarreVertical";
 
 function Footer(){
     return(
-        <div style={{backgroundColor:"#EE9F9F",left: 0,bottom: 0}} className=" d-flex justify-content-around w-100">
+        <div style={{backgroundColor:"#884A65",left: 0,bottom: 0}} className=" d-flex justify-content-around w-100">
             <div className="col-5 d-flex flex-column align-items-end mt-3 mb-3">
-                <ALink to={"/mentionLegal"} styles={{textDecoration: "none", color: "black"}}>Mentions Légale</ALink>
-                <ALink to={"/about"} styles={{textDecoration: "none", color: "black"}}>A propos</ALink>
-                <ALink to={"/contact"} styles={{textDecoration: "none", color: "black"}}>Nous contacter</ALink>
+                <ALink to={"/mentionLegal"} styles={{textDecoration: "none", color: "white"}}>Mentions Légale</ALink>
+                <ALink to={"/about"} styles={{textDecoration: "none", color: "white"}}>A propos</ALink>
+                <ALink to={"/contact"} styles={{textDecoration: "none", color: "white"}}>Nous contacter</ALink>
             </div>
             <ABarreVertical />
             <div className="col-5 d-flex align-items-center">
-                <TwitterIcon style={{marginRight:"2rem"}} fontSize="large"/>
-                <FacebookIcon  style={{marginRight:"2rem"}} fontSize="large"/>
-                <LinkedInIcon  style={{marginRight:"2rem"}} fontSize="large"/>
+                <TwitterIcon style={{marginRight:"2rem", color: "white"}} fontSize="large"/>
+                <FacebookIcon  style={{marginRight:"2rem", color: "white"}} fontSize="large"/>
+                <LinkedInIcon  style={{marginRight:"2rem", color: "white"}} fontSize="large"/>
 
             </div>
         </div>
