@@ -1,5 +1,8 @@
 # Project Actugaming - WebForce 3 - Module developpement web avec Javascript
-Création du front-end avec React pour blog d'actu-gaming
+
+###Création du front-end avec React pour blog d'actu-gaming
+
+Lien du repository github : [`https://github.com/Daeriss/actugaming`](`https://github.com/Daeriss/actugaming)
 
 
 ## Getting Started with Create React App
